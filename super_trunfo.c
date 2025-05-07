@@ -20,52 +20,68 @@ void limparBuffer() {
 
 int main() {
     Carta carta1, carta2;
+    float densidadePop1, densidadePop2;
+    float pibPerCapita1, pibPerCapita2;
     
     // Leitura dos dados da primeira carta
     printf("\n=== Cadastro da Carta 1 ===\n");
     printf("Digite o estado (A-Z): ");
-    scanf("%s", &carta1.estado);
+    scanf("%19s", carta1.estado);
+    limparBuffer();
 
     printf("Digite o codigo da carta: ");
-    scanf("%s", &carta1.codigo);
+    scanf("%3s", carta1.codigo);
+    limparBuffer();
 
     printf("Digite o nome da cidade: ");
-    scanf(" %[^\n]s", &carta1.cidade);
+    scanf("%49[^\n]", carta1.cidade);
+    limparBuffer();
 
     printf("Digite a populacao: ");
     scanf("%d", &carta1.populacao);
+    limparBuffer();
 
     printf("Digite a area (km): ");
     scanf("%f", &carta1.area);
+    limparBuffer();
 
     printf("Digite o PIB (em bilhoes): ");
     scanf("%f", &carta1.pib);
+    limparBuffer();
 
     printf("Digite o número de pontos turisticos: ");
     scanf("%d", &carta1.pontosTuristicos);
+    limparBuffer();
 
     // Leitura dos dados da segunda carta
     printf("\n=== Cadastro da Carta 2 ===\n");
-    printf("Digite o estado (A-H): ");
-    scanf(" %c", &carta2.estado);
+    printf("Digite o estado (A-Z): ");
+    scanf("%19s", carta2.estado);
+    limparBuffer();
 
     printf("Digite o codigo da carta: ");
-    scanf("%s", &carta2.codigo);
+    scanf("%3s", carta2.codigo);
+    limparBuffer();
 
     printf("Digite o nome da cidade: ");
-    scanf(" %[^\n]s", &carta2.cidade);
+    scanf("%49[^\n]", carta2.cidade);
+    limparBuffer();
 
     printf("Digite a populacao: ");
     scanf("%d", &carta2.populacao);
+    limparBuffer();
 
     printf("Digite a area (km): ");
     scanf("%f", &carta2.area);
+    limparBuffer();
 
     printf("Digite o PIB (em bilhoes): ");
     scanf("%f", &carta2.pib);
+    limparBuffer();
 
     printf("Digite o número de pontos turisticos: ");
     scanf("%d", &carta2.pontosTuristicos);
+    limparBuffer();
 
     // Calculando densidade populacional e PIB per capita
     densidadePop1 = carta1.populacao / carta1.area;
