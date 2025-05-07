@@ -16,6 +16,7 @@ typedef struct {
 void limparBuffer() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
+}
 
 int main() {
     Carta carta1, carta2;
@@ -65,6 +66,13 @@ int main() {
 
     printf("Digite o número de pontos turisticos: ");
     scanf("%d", &carta2.pontosTuristicos);
+
+    // Calculando densidade populacional e PIB per capita
+    densidadePop1 = carta1.populacao / carta1.area;
+    densidadePop2 = carta2.populacao / carta2.area;
+    
+    pibPerCapita1 = (carta1.pib * 1000000000) / carta1.populacao; // Convertendo PIB para reais
+    pibPerCapita2 = (carta2.pib * 1000000000) / carta2.populacao;
 
     // Exibição dos dados da primeira carta
     printf("\nCarta 1:\n");
