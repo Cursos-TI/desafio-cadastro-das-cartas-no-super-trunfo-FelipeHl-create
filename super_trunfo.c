@@ -1,4 +1,5 @@
      #include <stdio.h>
+     #include <string.h>
 
 // Definindo a estrutura para armazenar os dados de uma carta
 typedef struct {
@@ -10,6 +11,11 @@ typedef struct {
     float pib;
     int pontosTuristicos;
 } Carta;
+
+// Função para limpar o buffer de entrada
+void limparBuffer() {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
 
 int main() {
     Carta carta1, carta2;
